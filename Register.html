@@ -104,7 +104,7 @@
       </b>
     </h3>
     <br>
-    <p>距离开会时间还有<b style="font-size: 22px; color: red">49</b>天</p>
+    <p id="time"></p>
     <!-- <b class="mainTitle">第20届CCF 全国嵌入式系统大会(CCF ESTC2022)</b> -->
     <p>举办时间： 2022.10.09 ~ 10.11</p>
     <p>报名时间： 2022.07.20 ~ 2022.10.05</p>
@@ -216,6 +216,14 @@
 </div>
 
 </body>
+<script type="text/javascript">
+  const getDate = () => {
+    var date = new Date();
+    let day = Number(date.getDate()) //获取日期
+    return 9 - day
+  }
+  document.getElementById('time').innerHTML = "距离开会时间还有<b style='font-size: 22px; color: red'>" + getDate() + "</b>天"
+</script>
 <style>
 .h1, .h2, .h3, h1, h2, h3 {
   margin-top: 20px;
